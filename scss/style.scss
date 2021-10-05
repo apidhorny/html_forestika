@@ -26,14 +26,16 @@
     position: relative;
     z-index: 10;
 }
-.section-header {
-    background: url('../img/main-photo.jpg') no-repeat 50% 50%;
-    background-size: cover;
-    position: relative;
-    color: $color-white;
+.section-inner--header {
     display: flex;
     flex-direction: column;
     height: 100vh;
+}
+.section-header {
+    background: url('https://picsum.photos/id/1043/2000') no-repeat 50% 50%;
+    background-size: cover;
+    position: relative;
+    color: $color-white;
 
     &::before {
         content: '';
@@ -45,6 +47,7 @@
         left: 0;
         background-color: rgba(20, 30, 40, 0.5);
     }
+
     &__logo {
         font-size: 24px;
         font-weight: bold;
@@ -53,11 +56,16 @@
     }
 
     &__content {
-        margin-top: 100px;
+        flex-grow: 1;
+        display: flex;
+    }
+    &__content--wrapper {
+        margin-top: -62px;
         flex-grow: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
+        align-self: center;
     }
 
     &__title {
@@ -120,6 +128,7 @@
         }
     }
 }
+
 // === /HEADER ===
 
 // === NATURE ===
@@ -163,6 +172,7 @@
 
         img {
             width: 100%;
+            border-radius: 8px;
         }
     }
 
@@ -194,7 +204,52 @@
         }
     }
 }
-.section-inner {
-}
 
 // === /NATURE ===
+
+// === MOUNTAIN ===
+.section-mountain {
+    padding-bottom: 100px;
+    background-color: $bg-color;
+
+    &__wrapper {
+        display: flex;
+        padding-top: 100px;
+    }
+
+    &__img-block {
+        flex-basis: 50%;
+
+        img {
+            width: 80%;
+            border-radius: 8px;
+        }
+    }
+
+    &__text-block {
+        flex-basis: 50%;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: 300;
+        color: $color-grey;
+    }
+
+    &__name {
+        margin-top: 5px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: bold;
+    }
+
+    &__position {
+        font-size: 16px;
+        line-height: 27px;
+        font-weight: bold;
+        color: $color-grey;
+    }
+}
+
+// === /MOUNTAIN ===
