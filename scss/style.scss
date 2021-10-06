@@ -193,7 +193,7 @@
         }
         .item-logo {
             img {
-                border-radius: 50%;
+                border-radius: 8px;
             }
         }
         .item-header {
@@ -374,7 +374,7 @@
         margin-bottom: 26px;
     }
     &__image {
-        border-radius: 50%;
+        border-radius: 8px;
         margin-bottom: 25px;
     }
     &__text {
